@@ -21,3 +21,6 @@ import dask.dataframe as dd
 
 # Set the number of partitions
 athlete_events_dask = dd.from_pandas(athlete_events, npartitions = 4)
+
+# Print out the mean age for each Year. Remember dask uses lazy evaluation.
+ print(athlete_events_dask.groupby('Year').Age.mean().compute() )                
