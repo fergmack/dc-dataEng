@@ -8,3 +8,8 @@ secondary_types = ['Ice', 'nan']
 names_types = [*zip(names, primary_types, secondary_types)]
 
 print(*names_types[:5], sep='\n')
+
+# Combine five items from names and three items from primary_types
+differing_lengths = [*(names[:5], primary_types[:3])]
+
+print(*differing_lengths, sep='\n')
